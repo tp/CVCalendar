@@ -109,8 +109,8 @@ public class CVCalendarView: UIView {
     
     // MARK: - Initialization
     
-    convenience public init() {
-        self.init()
+    public init() {
+        super.init(frame: CGRect())
         
         hidden = true
         loadCalendarMode()
