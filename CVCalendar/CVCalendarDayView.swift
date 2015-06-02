@@ -14,7 +14,7 @@ public class CVCalendarDayView: UIView {
 
     var weekView: CVCalendarWeekView?
     var weekdayIndex: Int?
-    var date: CVDate?
+    public var date: CVDate?
     
     var dayLabel: UILabel?
     var circleView: CVCircleView?
