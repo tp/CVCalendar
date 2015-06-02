@@ -15,7 +15,7 @@ class CVDate: NSObject {
     let week: Int?
     let day: Int?
     
-    init(date: NSDate) {      
+    init(date: NSDate) {
         let calendarManager = CVCalendarManager.sharedManager
         
         self.date = date
