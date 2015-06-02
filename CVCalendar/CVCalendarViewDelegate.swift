@@ -9,7 +9,7 @@
 import UIKit
 
 @objc
-protocol CVCalendarViewDelegate {
+public protocol CVCalendarViewDelegate {
     func shouldShowWeekdaysOut() -> Bool
     
     func didSelectDayView(dayView: CVCalendarDayView)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CVCalendarDayView: UIView {
+public class CVCalendarDayView: UIView {
     
     // MARK: - Public properties
 
@@ -26,7 +26,7 @@ class CVCalendarDayView: UIView {
     
     // MARK: - Initialization
     
-    convenience init(weekView: CVCalendarWeekView, frame: CGRect, weekdayIndex: Int) {
+    convenience public init(weekView: CVCalendarWeekView, frame: CGRect, weekdayIndex: Int) {
         self.init()
         
         self.weekView = weekView
@@ -103,7 +103,7 @@ class CVCalendarDayView: UIView {
         super.init(frame: frame)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

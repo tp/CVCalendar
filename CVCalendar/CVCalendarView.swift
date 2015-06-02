@@ -69,7 +69,7 @@ public class CVCalendarView: UIView {
         }
     }
     
-    var delegate: CVCalendarViewDelegate?
+    public var delegate: CVCalendarViewDelegate?
     
     // MARK: - Calendar Appearance Delegate
     
