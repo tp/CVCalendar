@@ -13,7 +13,7 @@ enum CVCalendarViewMode {
     case WeekView
 }
 
-class CVCalendarView: UIView {
+public class CVCalendarView: UIView {
     
     // MARK: - Calendar Mode 
     
@@ -109,7 +109,7 @@ class CVCalendarView: UIView {
     
     // MARK: - Initialization
     
-    convenience init() {
+    convenience public init() {
         self.init()
         
         hidden = true
@@ -126,7 +126,7 @@ class CVCalendarView: UIView {
     }
 
     // IB Initialization
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         hidden = true
