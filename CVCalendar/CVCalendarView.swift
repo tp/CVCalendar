@@ -39,7 +39,7 @@ public class CVCalendarView: UIView {
     }
     
     // MARK: - Current date 
-    var presentedDate: CVDate? {
+    public var presentedDate: CVDate? {
         didSet {
             self.delegate?.presentedDateUpdated(self.presentedDate!)
         }

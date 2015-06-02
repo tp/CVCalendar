@@ -8,14 +8,14 @@
 
 import UIKit
 
-class CVDate: NSObject {
+public class CVDate: NSObject {
     private let date: NSDate?
     let year: Int?
     let month: Int?
     let week: Int?
     let day: Int?
     
-    init(date: NSDate) {
+    public init(date: NSDate) {
         let calendarManager = CVCalendarManager.sharedManager
         
         self.date = date
@@ -28,7 +28,7 @@ class CVDate: NSObject {
         super.init()
     }
     
-    init(day: Int, month: Int, week: Int, year: Int) {
+    public init(day: Int, month: Int, week: Int, year: Int) {
         self.year = year
         self.month = month
         self.week = week
