@@ -10,10 +10,10 @@ import UIKit
 
 public class CVDate: NSObject {
     private let date: NSDate?
-    let year: Int?
-    let month: Int?
-    let week: Int?
-    let day: Int?
+    public let year: Int?
+    public let month: Int?
+    public let week: Int?
+    public let day: Int?
     
     public init(date: NSDate) {
         let calendarManager = CVCalendarManager.sharedManager
