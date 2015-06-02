@@ -152,7 +152,7 @@ public class CVCalendarView: UIView {
     // MARK: - Final preparation
     
     // Called on view's appearing.
-    func commitCalendarViewUpdate() {
+    public func commitCalendarViewUpdate() {
         let coordinator = CVCalendarDayViewControlCoordinator.sharedControlCoordinator
         coordinator.animator = self.animator
         contentController.updateFrames(bounds)
