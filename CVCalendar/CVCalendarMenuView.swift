@@ -8,15 +8,14 @@
 
 import UIKit
 
-class CVCalendarMenuView: UIView {
-    
+public class CVCalendarMenuView: UIView {
     var starterWeekday = 1
     
     var symbols = [String]()
     var symbolViews: [UILabel]?
 
-    convenience init() {
-        self.init()
+    public init() {
+        super.init(frame: CGRect())
         
         self.setupWeekdaySymbols()
         self.createDaySymbols()
@@ -29,10 +28,9 @@ class CVCalendarMenuView: UIView {
         self.createDaySymbols()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-
         self.setupWeekdaySymbols()
         self.createDaySymbols()
     }
@@ -47,7 +45,6 @@ class CVCalendarMenuView: UIView {
             let firstWeekday = currentCalendar.firstWeekday
             self.starterWeekday = firstWeekday
         }
-        
         
         let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
         calendar.components(NSCalendarUnit.MonthCalendarUnit | NSCalendarUnit.DayCalendarUnit, fromDate: NSDate())
@@ -93,7 +90,7 @@ class CVCalendarMenuView: UIView {
         }
     }
     
-    func commitMenuViewUpdate() {
+    public func commitMenuViewUpdate() {
         let space = 0 as CGFloat
         let width = self.frame.width / 7 - space
         let height = self.frame.height
