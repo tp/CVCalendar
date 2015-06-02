@@ -35,7 +35,7 @@ class CVCalendarView: UIView {
             }
         }
         
-        println("Mode is : \(calendarMode?)")
+        println("Mode is : \(calendarMode)")
     }
     
     // MARK: - Current date 
@@ -109,8 +109,8 @@ class CVCalendarView: UIView {
     
     // MARK: - Initialization
     
-    override init() {
-        super.init()
+    convenience init() {
+        self.init()
         
         hidden = true
         loadCalendarMode()

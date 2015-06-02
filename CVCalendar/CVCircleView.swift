@@ -13,9 +13,10 @@ class CVCircleView: UIView {
     private let color: UIColor?
     
     init(frame: CGRect, color: UIColor, _alpha: CGFloat) {
+        self.color = color
+        
         super.init(frame: frame)
         
-        self.color = color
         self.alpha = _alpha
         
         self.backgroundColor = .clearColor()

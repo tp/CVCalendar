@@ -39,7 +39,7 @@ class CVCalendarMonthContentView: NSObject, CVCalendarContentDelegate {
     private var pageLoadingEnabled = true
     private var direction: ScrollDirection = .None
     
-    private let controller: CVCalendarContentViewController!
+//    private let controller: CVCalendarContentViewController!
     private let calendarView: CVCalendarView!
     private let presentedMonthView: CVCalendarMonthView!
     private let contentController: ContentController!
@@ -48,12 +48,14 @@ class CVCalendarMonthContentView: NSObject, CVCalendarContentDelegate {
     // MARK: - Initialization
     
     init(contentController: ContentController) {
-        super.init()
+
         
         self.contentController = contentController
         self.calendarView = contentController.calendarView
         self.presentedMonthView = contentController.presentedMonthView
         self.scrollView = contentController.preparedScrollView()
+        
+        super.init()
         
         self.monthViews = [Int : CVCalendarMonthView]()
         self.initialLoad(presentedMonthView)

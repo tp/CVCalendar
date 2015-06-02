@@ -15,9 +15,7 @@ class CVDate: NSObject {
     let week: Int?
     let day: Int?
     
-    init(date: NSDate) {
-        super.init()
-        
+    init(date: NSDate) {      
         let calendarManager = CVCalendarManager.sharedManager
         
         self.date = date
@@ -25,23 +23,27 @@ class CVDate: NSObject {
         self.year = calendarManager.dateRange(date).year
         self.month = calendarManager.dateRange(date).month
         self.day = calendarManager.dateRange(date).day
+        self.week = nil
+        
+        super.init()
     }
     
     init(day: Int, month: Int, week: Int, year: Int) {
-        super.init()
-        
         self.year = year
         self.month = month
         self.week = week
         self.day = day
-    }
-    
-    func description() -> String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMMM"
+        self.date = nil
         
-        let month = dateFormatter.stringFromDate(self.date!)
-        
-        return "\(month), \(self.year!)"
+        super.init()
     }
+
+//    func description() -> String {
+//        let dateFormatter = NSDateFormatter()
+//        dateFormatter.dateFormat = "MMMM"
+//        
+//        let month = dateFormatter.stringFromDate(self.date!)
+//        
+//        return "\(month), \(self.year!)"
+//    }
 }

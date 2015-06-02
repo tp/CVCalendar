@@ -15,8 +15,8 @@ class CVCalendarMenuView: UIView {
     var symbols = [String]()
     var symbolViews: [UILabel]?
 
-    override init() {
-        super.init()
+    convenience init() {
+        self.init()
         
         self.setupWeekdaySymbols()
         self.createDaySymbols()
@@ -53,7 +53,7 @@ class CVCalendarMenuView: UIView {
         calendar.components(NSCalendarUnit.MonthCalendarUnit | NSCalendarUnit.DayCalendarUnit, fromDate: NSDate())
         calendar.firstWeekday = self.starterWeekday
         
-        symbols = calendar.weekdaySymbols as [String]
+        symbols = calendar.weekdaySymbols as! [String]
     }
     
     func createDaySymbols() {
@@ -68,7 +68,7 @@ class CVCalendarMenuView: UIView {
             weekdays = weekdays.arrayByAddingObjectsFromArray(copy.subarrayWithRange(NSMakeRange(0, firstWeekdayIndex)))
         }
         
-        self.symbols = weekdays as [String]
+        self.symbols = weekdays as! [String]
         
         // Add symbols.
         self.symbolViews = [UILabel]()
